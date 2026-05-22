@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>ScaleRide | Professional Ride-Hailing Platform Proposal</title>
+  <title>ScaleRide | Professional Ride-Hailing Platform Proposal (Flutter + React Native)</title>
   <!-- Google Fonts & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -125,7 +125,7 @@
     }
     .btn-outline:hover { background: #f9731610; transform: translateY(-2px); }
 
-    /* hero section with modern gradient */
+    /* hero section */
     .hero {
       padding: 50px 0 40px;
       background: linear-gradient(125deg, #ffffff 0%, #fff8f0 100%);
@@ -231,10 +231,6 @@
       border-left: 3px solid #f97316;
       margin-top: 16px;
       word-break: break-word;
-    }
-    .arch-flow i, .arch-flow span {
-      display: inline-block;
-      font-size: 0.7rem;
     }
 
     /* section titles */
@@ -360,7 +356,7 @@
       100% { opacity: 0.5; transform: translateX(0);}
     }
 
-    /* timeline phases - responsive stack */
+    /* timeline phases */
     .timeline {
       display: flex;
       flex-wrap: wrap;
@@ -377,19 +373,14 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.02);
     }
     .phase:hover { transform: translateX(5px); background: white; box-shadow: 0 12px 20px -12px rgba(0,0,0,0.08);}
-    .phase h4 {
-      font-size: 1.2rem;
-    }
+    .phase h4 { font-size: 1.2rem; }
     .duration {
       color: #f97316;
       font-weight: 700;
       margin: 6px 0;
       font-size: 0.85rem;
     }
-    .phase p {
-      font-size: 0.85rem;
-      color: #475569;
-    }
+    .phase p { font-size: 0.85rem; color: #475569; }
 
     /* pricing cards */
     .pricing {
@@ -413,10 +404,7 @@
       box-shadow: 0 20px 30px -15px rgba(249,115,22,0.2);
     }
     .price-card:hover { transform: translateY(-8px);}
-    .price-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
+    .price-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
     .price-card ul { list-style: none; line-height: 1.8; margin: 20px 0; font-size: 0.9rem;}
     .price-card p { font-size: 0.9rem; }
 
@@ -479,131 +467,56 @@
       margin-top: 60px;
       border-top: 1px solid #f9731620;
     }
-    footer .container > div {
-      flex-wrap: wrap;
-      gap: 20px;
-      text-align: center;
-      justify-content: center;
-    }
-    footer .container > div > div {
-      text-align: center;
-    }
 
     /* enhanced responsive breakpoints */
     @media (max-width: 900px) {
-      .container {
-        padding: 0 20px;
-      }
-      .arch-diagram {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .arrow-icon {
-        transform: rotate(90deg);
-        margin: 4px 0;
-      }
-      .arrow-icon i {
-        transform: rotate(0deg);
-      }
-      .hero-stats {
-        justify-content: flex-start;
-      }
-      .stat {
-        white-space: normal;
-        font-size: 0.85rem;
-      }
+      .container { padding: 0 20px; }
+      .arch-diagram { flex-direction: column; align-items: stretch; }
+      .arrow-icon { transform: rotate(90deg); margin: 4px 0; }
+      .arrow-icon i { transform: rotate(0deg); }
+      .hero-stats { justify-content: flex-start; }
+      .stat { white-space: normal; font-size: 0.85rem; }
     }
 
     @media (max-width: 680px) {
-      .nav-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-      .nav-links {
-        justify-content: center;
-        gap: 16px;
-      }
-      .btn-outline {
-        margin-top: 4px;
-      }
-      .hero-grid {
-        gap: 28px;
-      }
-      .hero-content h1 br {
-        display: none;
-      }
-      .hero-content p {
-        max-width: 100%;
-      }
-      .hero-visual {
-        padding: 20px;
-      }
-      .arch-flow {
-        font-size: 0.65rem;
-      }
-      .arch-section {
-        padding: 24px 16px;
-      }
-      .phase {
-        flex: 1 1 100%;
-      }
-      .price-card.featured {
-        transform: scale(1);
-      }
-      .cta-block {
-        padding: 32px 20px;
-      }
-      .contact-details {
-        font-size: 0.8rem;
-      }
-      .grid-3 {
-        gap: 20px;
-      }
+      .nav-flex { flex-direction: column; align-items: center; }
+      .nav-links { justify-content: center; gap: 16px; }
+      .btn-outline { margin-top: 4px; }
+      .hero-grid { gap: 28px; }
+      .hero-content h1 br { display: none; }
+      .hero-content p { max-width: 100%; }
+      .hero-visual { padding: 20px; }
+      .arch-flow { font-size: 0.65rem; }
+      .arch-section { padding: 24px 16px; }
+      .phase { flex: 1 1 100%; }
+      .price-card.featured { transform: scale(1); }
+      .cta-block { padding: 32px 20px; }
+      .contact-details { font-size: 0.8rem; }
+      .grid-3 { gap: 20px; }
     }
 
     @media (max-width: 480px) {
-      .hero-stats {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-      }
-      .stat {
-        text-align: center;
-        white-space: normal;
-      }
-      .nav-links a {
-        font-size: 0.85rem;
-      }
-      .logo {
-        font-size: 1.5rem;
-      }
-      .btn-primary {
-        padding: 10px 24px;
-        font-size: 0.85rem;
-      }
-      .card {
-        padding: 20px;
-      }
-      .card h3 {
-        font-size: 1.25rem;
-      }
-      .timeline {
-        gap: 16px;
-      }
+      .hero-stats { flex-direction: column; gap: 10px; width: 100%; }
+      .stat { text-align: center; white-space: normal; }
+      .nav-links a { font-size: 0.85rem; }
+      .logo { font-size: 1.5rem; }
+      .btn-primary { padding: 10px 24px; font-size: 0.85rem; }
+      .card { padding: 20px; }
+      .card h3 { font-size: 1.25rem; }
     }
 
     /* micro animations */
-    .fa-route, .fa-taxi { transition: transform 0.3s; }
     .hero-visual i { animation: bounceSoft 2s infinite; }
     @keyframes bounceSoft {
       0%,100%{ transform: translateY(0);}
       50%{ transform: translateY(-5px);}
     }
     .contact-details i { margin-right: 8px; color: #f97316; }
-    
-    /* fix inline flex */
-    .arch-flow i, .arch-flow .fas, .arch-flow .fab {
-      margin: 0 2px;
+    .tech-stack-highlight {
+      background: linear-gradient(90deg, #fff0e0, transparent);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -624,11 +537,11 @@
 </nav>
 
 <main>
-  <!-- Hero section - professional intro -->
+  <!-- Hero section -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
-        <div class="badge"><i class="fas fa-taxi fa-fw"></i> Enterprise Ride-Hailing Solution</div>
+        <div class="badge"><i class="fas fa-taxi fa-fw"></i> Enterprise Ride-Hailing Solution | Flutter + React Native</div>
         <h1>Scalable ride-hailing ecosystem <br> built for growth & reliability.</h1>
         <p>A complete Grab-like platform with passenger app, driver app, and powerful admin dashboard. Engineered for high performance, real-time GPS tracking, and future expansion into delivery & fleet management.</p>
         <div class="hero-stats">
@@ -650,18 +563,19 @@
     </div>
   </section>
 
-  <!-- Platform Overview & Core Features -->
+  <!-- Platform Overview & Core Features - Updated with Flutter/React Native flexibility -->
   <div class="container" id="scope">
     <div class="section-title">
       <h2>📌 Complete ride-hailing platform</h2>
-      <p>Three interconnected applications — seamless experience for passengers, drivers, and administrators</p>
+      <p>Three interconnected applications — choose <strong>Flutter</strong> or <strong>React Native</strong> for cross-platform mobile apps</p>
     </div>
     <div class="grid-3">
       <div class="card">
         <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
         <h3>Passenger App</h3>
         <p>Registration & OTP login, real-time booking, live driver tracking, fare estimation, ride history, multiple payment methods, ratings, and push notifications.</p>
-        <span class="tech-badge">React Native</span>
+        <span class="tech-badge"><i class="fab fa-flutter"></i> Flutter</span>
+        <span class="tech-badge"><i class="fab fa-react"></i> React Native</span>
         <span class="tech-badge">Firebase</span>
         <span class="tech-badge">Maps SDK</span>
       </div>
@@ -669,7 +583,8 @@
         <div class="card-icon"><i class="fas fa-car-side"></i></div>
         <h3>Driver App</h3>
         <p>Driver onboarding, document upload, accept/decline rides, GPS navigation, earnings dashboard, trip history, availability toggle, and instant notifications.</p>
-        <span class="tech-badge">Google Maps API</span>
+        <span class="tech-badge"><i class="fab fa-flutter"></i> Flutter</span>
+        <span class="tech-badge"><i class="fab fa-react"></i> React Native</span>
         <span class="tech-badge">Socket.IO</span>
         <span class="tech-badge">Geolocation</span>
       </div>
@@ -677,23 +592,23 @@
         <div class="card-icon"><i class="fas fa-chart-line"></i></div>
         <h3>Admin Dashboard</h3>
         <p>User & driver management, live ride monitoring, revenue analytics, promo engine, dispute resolution, and complete database oversight.</p>
-        <span class="tech-badge">React</span>
-        <span class="tech-badge">Laravel</span>
+        <span class="tech-badge">React / Next.js</span>
+        <span class="tech-badge">Laravel / Node.js</span>
         <span class="tech-badge">PostgreSQL</span>
       </div>
     </div>
   </div>
 
-  <!-- System Architecture -->
+  <!-- System Architecture - Updated with Flutter/React Native flexibility -->
   <div class="container" id="architecture">
     <div class="arch-section">
       <div style="text-align:center; margin-bottom:24px;">
         <span class="badge" style="background:#eef2ff; color:#f97316;"><i class="fas fa-microchip"></i>  Production-ready architecture</span>
         <h2 style="margin-top:12px; font-size: clamp(1.4rem, 4vw, 1.8rem);">Modern, secure & horizontally scalable</h2>
-        <p style="font-size: clamp(0.85rem, 3vw, 0.95rem);">Built to handle thousands of concurrent rides with real-time synchronization</p>
+        <p>Built to handle thousands of concurrent rides with real-time synchronization</p>
       </div>
       <div class="arch-diagram">
-        <div class="arch-node"><i class="fab fa-react"></i> React Native<br>Mobile Apps</div>
+        <div class="arch-node"><i class="fab fa-flutter"></i> Flutter /<br>React Native<br>Mobile Apps</div>
         <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
         <div class="arch-node"><i class="fab fa-node-js"></i> Node.js + Express<br>API Gateway</div>
         <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
@@ -706,10 +621,25 @@
         <span class="tech-badge" style="background:#e2e3ff;"><i class="fas fa-lock"></i> JWT + OTP Auth</span>
         <span class="tech-badge" style="background:#e2e3ff;"><i class="fas fa-map-pin"></i> Google Maps Platform</span>
         <span class="tech-badge" style="background:#e2e3ff;"><i class="fas fa-tachometer-alt"></i> Redis Caching</span>
+        <span class="tech-badge" style="background:#e2e3ff;"><i class="fab fa-flutter"></i> Flutter (iOS/Android)</span>
+        <span class="tech-badge" style="background:#e2e3ff;"><i class="fab fa-react"></i> React Native</span>
       </div>
       <div style="margin-top: 28px; background:#f1f5f9; border-radius: 24px; padding: 20px;">
         <h4 style="font-weight:700; font-size: 1rem;"><i class="fas fa-diagram-project"></i> Data flow overview:</h4>
         <p style="font-family: monospace; font-size:0.85rem; margin-top:12px; word-break: break-word;">Passenger requests ride → API validates & stores booking → Driver matching via real-time queue → GPS tracking updates every 3s → Admin dashboard live sync</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Flexibility Section -->
+  <div class="container">
+    <div style="background: linear-gradient(115deg, #eef2ff, #ffffff); border-radius: 32px; padding: 28px; margin: 20px 0; text-align: center;">
+      <i class="fas fa-code-branch" style="font-size: 2rem; color: #f97316;"></i>
+      <h3 style="margin: 12px 0; font-size: 1.4rem;">Flexible Mobile Tech Stack</h3>
+      <p>We develop using <strong>Flutter (Dart)</strong> OR <strong>React Native (JavaScript/TypeScript)</strong> — both deliver high-performance, native-like cross-platform apps. Choose based on your team's preference and long-term maintenance goals.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+        <span class="tech-badge" style="background:#02569B20; font-size: 0.8rem;"><i class="fab fa-flutter"></i> Flutter — Beautiful UI, single codebase</span>
+        <span class="tech-badge" style="background:#61DAFB20; font-size: 0.8rem;"><i class="fab fa-react"></i> React Native — Large ecosystem, hot reload</span>
       </div>
     </div>
   </div>
@@ -721,15 +651,15 @@
       <p>Agile delivery with weekly demos and full transparency</p>
     </div>
     <div class="timeline">
-      <div class="phase"><h4>📐 Phase 1 · Planning</h4><div class="duration">1-2 weeks</div><p>Database schema, wireframes, API design, tech stack finalization, and Figma prototypes.</p></div>
+      <div class="phase"><h4>📐 Phase 1 · Planning</h4><div class="duration">1-2 weeks</div><p>Database schema, wireframes, API design, tech stack finalization (Flutter or React Native), Figma prototypes.</p></div>
       <div class="phase"><h4>⚙️ Phase 2 · Backend Core</h4><div class="duration">2-4 weeks</div><p>Authentication, booking logic, ride matching, payment stub, admin APIs, security layer.</p></div>
-      <div class="phase"><h4>📱 Phase 3 · Mobile Apps</h4><div class="duration">3-5 weeks</div><p>Passenger & driver apps, real-time GPS, push notifications, trip flow, earnings.</p></div>
+      <div class="phase"><h4>📱 Phase 3 · Mobile Apps</h4><div class="duration">3-5 weeks</div><p>Passenger & driver apps (Flutter/React Native), real-time GPS, push notifications, trip flow, earnings.</p></div>
       <div class="phase"><h4>🖥️ Phase 4 · Admin Panel</h4><div class="duration">1-2 weeks</div><p>Dashboard, analytics charts, driver/passenger management, ride monitoring, reports.</p></div>
       <div class="phase"><h4>🚀 Phase 5 · Testing & Launch</h4><div class="duration">1-2 weeks</div><p>QA testing, load testing, security audit, deployment on cloud, post-launch monitoring setup.</p></div>
     </div>
     <div style="background: linear-gradient(115deg,#fef3e8, white); border-radius: 28px; padding: 24px; margin: 28px 0;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-        <div><i class="fas fa-hourglass-half" style="font-size:1.8rem; color:#f97316;"></i> <strong style="font-size:1.4rem;">MVP delivery: 6–10 weeks</strong> <span style="color:#475569; display: inline-block;">| Full-featured: 3–6 months</span></div>
+        <div><i class="fas fa-hourglass-half" style="font-size:1.8rem; color:#f97316;"></i> <strong style="font-size:1.4rem;">MVP delivery: 6–10 weeks</strong> <span style="color:#475569;">| Full-featured: 3–6 months</span></div>
         <div><span class="tech-badge" style="background:#f97316; color:white;">Agile · Weekly demos</span></div>
       </div>
       <p style="margin-top:16px; font-size:0.9rem;">Timeline adjusts based on custom feature requirements and client feedback loops.</p>
@@ -833,8 +763,8 @@
       <div><i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-facebook"></i></div>
     </div>
     <hr style="margin: 24px 0; opacity:0.2;">
-    <p style="text-align: center; font-size: 0.8rem;">Full-stack confidence · Real-time GPS · Scalable microservices architecture · 24/7 support readiness</p>
+    <p style="text-align: center; font-size: 0.8rem;">Full-stack confidence · Real-time GPS · Flutter / React Native · Scalable microservices · 24/7 support</p>
   </div>
 </footer>
 </body>
-  </html>
+        </html>
